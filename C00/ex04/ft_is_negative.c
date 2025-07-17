@@ -1,13 +1,25 @@
-#include<unistd.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_is_negative.c                                   :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: yel-bouh <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/07/17 10:22:11 by yel-bouh          #+#    #+#             */
+/*   Updated: 2025/07/17 10:24:05 by yel-bouh         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+#include <unistd.h>
 
-
-void ft_is_negative(int n){
-	if(n <= 0)
-	write(1, "N", 1);
+void	ft_is_negative(int n)
+{
+	if (n <= 0)
+		write(1, "N", 1);
 	else
-	write(1, "P", 1);
-	    
-                          }
-int main(){
+		write(1, "P", 1);
+}
+
+int	main(void)
+{
 	ft_is_negative(-5);
-	  }
+}

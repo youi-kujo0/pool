@@ -6,7 +6,7 @@
 /*   By: yel-bouh <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/16 20:20:12 by yel-bouh          #+#    #+#             */
-/*   Updated: 2025/07/16 20:28:35 by yel-bouh         ###   ########.fr       */
+/*   Updated: 2025/07/17 09:32:49 by yel-bouh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,9 +31,7 @@ void	ft_print_comb(void)
 				write(1, &b, 1);
 				write(1, &c, 1);
 				if (!(a == '7' && b == '8' && c == '9'))
-				{
 					write(1, ", ", 2);
-				}
 				c++;
 			}
 			b++;
@@ -42,3 +40,8 @@ void	ft_print_comb(void)
 	}
 }
 
+int	main(void)
+{
+	ft_print_comb();
+	return (0);
+}
