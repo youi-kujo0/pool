@@ -1,21 +1,23 @@
-#include <stdio.h>
-
-int length;
-int	ft_strlen(char *str)
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: yel-bouh <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/07/19 16:17:36 by yel-bouh          #+#    #+#             */
+/*   Updated: 2025/07/19 16:20:38 by yel-bouh         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+void	ft_strlen(char *str)
 {
 	int	i;
+	int	length;
+
 	length = 0;
-
-	while(str[i] != 0)
+	while (str[i] != 0)
 	{
-	i++;
-	length++;
+		i++;
+		length++;
 	}
-	return length;
-}
-
-int main()
-{
-	ft_strlen("coucou cv 3lik");
-	printf("%d", length);
 }
