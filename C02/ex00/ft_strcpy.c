@@ -6,31 +6,21 @@
 /*   By: yel-bouh <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/20 17:55:09 by yel-bouh          #+#    #+#             */
-/*   Updated: 2025/07/20 17:55:22 by yel-bouh         ###   ########.fr       */
+/*   Updated: 2025/07/22 13:59:04 by yel-bouh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 #include <stdio.h>
-
 
 char	*ft_strcpy(char *dest, char *src)
 {
 	int	i;
 
 	i = 0;
-	while(src[i])
+	while (src[i])
 	{
 		dest[i] = src[i];
 		i++;
 	}
 	dest[i] = 0;
 	return (dest);
-}
-int main()
-{
-	char *str = "HELLO";
-	char dest[10];
-	ft_strcpy(dest, str);
-	printf("%s\n", dest);
-
 }

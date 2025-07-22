@@ -6,37 +6,33 @@
 /*   By: yel-bouh <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/20 17:59:56 by yel-bouh          #+#    #+#             */
-/*   Updated: 2025/07/20 17:59:58 by yel-bouh         ###   ########.fr       */
+/*   Updated: 2025/07/22 16:37:40 by yel-bouh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 #include <unistd.h>
 
-void ft_putstr_non_printable(char *str)
+void	ft_putstr_non_printable(char *str)
 {
-	int	i;
-	i = 0;
-	while(str[i] != 0)
-	{
-		if(str[i] < 32 || str[i] > 126)
-		{
-			char hex_dec[]= "0123456789abcdef";
-			char buff[2];
+	int		i;
+	char	hex_dec[16] = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9',
+						 'A', 'B', 'C', 'D', 'E', 'F'};
+	char	buff[3];
 
-			buff[0] = hex_dec[(str[i] >> 4) & 0x0f];
-			buff[1] = hex_dec[str[i] & 0x0f];
-			write(1, "\\", 1);
-			write(1, buff, 2);
+	i = 0;
+	while (str[i] != '\0')
+	{
+		if (str[i] <= 31 || str[i] >= 127)
+		{
+			buff[0] = '\\';
+			buff[1] = hex_dec[(str[i] >> 4) & 0x0F];
+			buff[2] = hex_dec[str[i] & 0x0F];
+			write(1, buff, 3);
 		}
-		write(1, &str[i], 1);
+		else
+		{
+			write(1, &str[i], 1);
+		}
 		i++;
 	}
 }
 
-int main()
-{
-    char test_str[] = "Hello\nWorld\t!\x01\x7F";
-    ft_putstr_non_printable(test_str);
-    write(1, "\n", 1);
-    return 0;
-}
