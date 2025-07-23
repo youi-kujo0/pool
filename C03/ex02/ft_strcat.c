@@ -9,22 +9,22 @@ char *ft_strcat(char *dest, char *src)
 	i = 0;
 	while(dest[i] != 0)
 	{
+		i++;
+	}
 		while(src[j] != 0)
 	     	{
 			dest[i] = src[j];
 			i++;
 			j++;
 	        }
-		i++;
-	}
-	return dest;
+	return (dest);
 
 }
 	
 int main()
 {
-	        char src[15] = "hello world!";
-	        char dest[15] = "hello";
+	        char src[30] = "Hello world";
+	        char dest[30] = "Hello";
 	        char *result = ft_strcat( dest, src );
 		printf("%s", result);
 }

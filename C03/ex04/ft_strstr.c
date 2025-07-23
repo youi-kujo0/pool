@@ -5,7 +5,6 @@ char *ft_strstr(char *str, char *to_find)
 	int	i;
 	int	j;
 	char	*null;
-	int	start;
 
 	null = NULL;
 	j = 0;
@@ -29,7 +28,7 @@ char *ft_strstr(char *str, char *to_find)
 int main()
 {
 	char	str[30] = "hello world i love you";
-	char	to_find[30] = "worold";
+	char	to_find[30] = "love";
 	char	*result = ft_strstr(str,to_find);
 	printf("%s", result);
 }
