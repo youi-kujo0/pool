@@ -3,22 +3,38 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strcapitalize.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yel-bouh <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: ymazoz <ymazoz@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/20 17:59:18 by yel-bouh          #+#    #+#             */
-/*   Updated: 2025/07/22 15:34:32 by yel-bouh         ###   ########.fr       */
+/*   Updated: 2025/07/23 11:41:21 by ymazoz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+
+#include <stdio.h>
+
 char	*ft_strcapitalize(char *str)
 {
 	int	i;
 
 	i = 0;
-	while (str[i] != 0)
+	while (str[i] >= 'A' && str[i] <= 'Z')
 	{
-		if (i == 0 || str[i - 1] == ' ' && (str[i] >= 'a' && str[i] <= 'z'))
-			str[i] -= 32;
+		str[i] += 32;
 		i++;
 	}
-	return (str);
+	i = 0;
+	while(str[i] != 0)
+	{
+		if (i == 0 && str[i] >= 'a' && str[i] <= 'z')
+			str[i] -= 32;
+		if (str[i] >= 'a' && str[i] <= 'z' && i != 0)
+		{
+			if (!((str[i - 1] >= 'a' && str[i - 1] <= 'z')
+				|| (str[i - 1] >= '0' && str[i - 1] <= '9')
+				|| (str[i - 1] >= 'A' && str[i - 1] <= 'Z')))
+				str[i] -= 32;
+		}
+		i++;
+	}
 }
