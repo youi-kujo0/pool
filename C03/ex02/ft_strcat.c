@@ -17,14 +17,15 @@ char *ft_strcat(char *dest, char *src)
 			i++;
 			j++;
 	        }
+		dest[i] = 0;
 	return (dest);
 
 }
 	
 int main()
 {
-	        char src[30] = "Hello world";
-	        char dest[30] = "Hello";
+	        char dest[20] = "";
+	        char src[] = "Hello";
 	        char *result = ft_strcat( dest, src );
 		printf("%s", result);
 }

@@ -4,13 +4,11 @@ char *ft_strstr(char *str, char *to_find)
 {
 	int	i;
 	int	j;
-	char	*null;
 
-	null = NULL;
 	j = 0;
 	i = 0;
 	if(to_find[j] == 0)
-		return null;
+		return str;
 	while(str[i] != 0)
 	{
 		while(str[i + j] == to_find[j] && to_find[j] != 0)
@@ -21,14 +19,14 @@ char *ft_strstr(char *str, char *to_find)
 			return str + i;		
 		i++;
 	}
-	return null;
+	return NULL;
 
 }
 
 int main()
 {
 	char	str[30] = "hello world i love you";
-	char	to_find[30] = "love";
+	char	to_find[30] = "worlld";
 	char	*result = ft_strstr(str,to_find);
 	printf("%s", result);
 }
