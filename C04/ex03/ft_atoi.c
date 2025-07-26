@@ -3,30 +3,35 @@
 int	ft_atoi(char *str)
 {
 	int	i;
-	int	j;
+	int	sign;
 	int	nbr;
 
+	nbr = 0;
+	sign = 1;
 	i = 0;
-	while((str[i] < '0' || str[i] > '9') && str[i])
+	while((str[i] >= 9 && str[i] <= 12 && str[i]) || str[i] == 32)
+	{
+		i++;
+	}
+	while(str[i] == '+' || str[i] == '-')
 	{
 		if(str[i] == '-')
-			nbr = -nbr;
+			sign *= -1;
 		i++;
 	}
 	while(str[i] >= '0' && str[i] <= '9')
 	{
-		nbr = str[i] - '0';
-		//if(str[i + 1] != 0 && str[i + 1] >= '0' && str[i + 1] <= '9')
-			//nbr = nbr * 10 + (str[i] - '0');
+		nbr = nbr * 10 + (str[i] - '0');
+		i++;
 
 	}
-	return nbr;
+	return nbr * sign;
 }
 
 int main()
 {
 	int nbr;
-	char	str[] = "-2";
+	char	str[] = "	  ---+--+1234ab567";
 	nbr = ft_atoi(str);
 	printf("%i", nbr);
 }
