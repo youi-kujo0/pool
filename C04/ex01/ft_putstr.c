@@ -14,5 +14,5 @@ void	ft_putstr(char *str)
 
 int main()
 {
-	ft_putstr("Hello world !");
+	ft_putstr("Hey guys how are u doing today ");
 }

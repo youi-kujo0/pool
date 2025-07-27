@@ -2,17 +2,21 @@
 
 void	ft_putnbr(int nb)
 {
-	if(nb < 0)
+	char	c;
+	long nbr = (long)nb;
+	if(nbr < 0)
 	{
 		write(1, "-", 1);
-		nb = -nb;
+		nbr = -nbr;
 	}
-	if(nb > 9)
-		ft_putnbr(nb / 10);
-	write(1, &(unsigned char){nb % 10 + '0'}, 1);
+	if(nbr > 9)
+		ft_putnbr(nbr / 10);
+	c = nbr % 10 + '0';
+	write(1 ,&c, 1);
 }
 
 int main()
 {
-	ft_putnbr(-214748349);
+	ft_putnbr(-2147483648);
 }
+

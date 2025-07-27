@@ -31,7 +31,7 @@ int	ft_atoi(char *str)
 int main()
 {
 	int nbr;
-	char	str[] = "	  ---+--+1234ab567";
+	char	str[] ="++-+1234";
 	nbr = ft_atoi(str);
 	printf("%i", nbr);
 }

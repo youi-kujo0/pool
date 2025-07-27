@@ -1,38 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcmp.c                                        :+:      :+:    :+:   */
+/*   ft_rev_params.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yel-bouh <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/21 16:54:06 by yel-bouh          #+#    #+#             */
-/*   Updated: 2025/07/27 13:22:18 by yel-bouh         ###   ########.fr       */
+/*   Created: 2025/07/27 13:14:51 by yel-bouh          #+#    #+#             */
+/*   Updated: 2025/07/27 13:16:52 by yel-bouh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include <unistd.h>
 
-#include <stdio.h>
-
-
-int ft_strcmp(char *s1, char *s2)
+void	ft_putstr(char *str)
 {
-        int     i;
-        int     c;
+	int	i;
 
-        i = 0;
-        while(s1[i] != 0 && s2[i] != 0)
-        {
-		c = s1[i] - s2[i];
-		if(!( c == 0))
-			return c;
-                i++;
-        }
-        return s1[i] - s2[i];
+	i = 0;
+	while (str[i])
+	{
+		write (1, &str[i], 1);
+		i++;
+	}
 }
 
-int main()
+int main(int argc, char **argv)
 {
-        char    *s1 = "Banana";
-        char    *s2 = "Bana";
-       int result = ft_strcmp(s1, s2);
-        printf("%i", result);
+	int	i;
+
+	i = argc - 1;
+	while (i > 0)
+	{
+		ft_putstr(argv[i]);
+		write (1, "\n", 1);
+		i--;
+	}	
 }
+
