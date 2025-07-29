@@ -3,13 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_sort_int_tab.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yel-bouh <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: ymazoz <ymazoz@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/19 16:27:07 by yel-bouh          #+#    #+#             */
-/*   Updated: 2025/07/19 18:40:23 by yel-bouh         ###   ########.fr       */
+/*   Updated: 2025/07/28 12:54:23 by ymazoz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-void	ft_sort_int_tab(int *tab, int size)
+
 {
 	int	temp;
 	int	i;

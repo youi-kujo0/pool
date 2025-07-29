@@ -3,13 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yel-bouh <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: ymazoz <ymazoz@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/21 17:04:59 by yel-bouh          #+#    #+#             */
-/*   Updated: 2025/07/24 14:35:21 by yel-bouh         ###   ########.fr       */
+/*   Updated: 2025/07/28 16:13:35 by ymazoz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdio.h>
+
 
 int ft_strncmp(char *s1, char *s2, unsigned int n)
 {
@@ -18,10 +18,10 @@ int ft_strncmp(char *s1, char *s2, unsigned int n)
 
         i = 0;
 	while(i < n && s1 && s2)
-	{	
+	{
 		c = s1[i] - s2[i];
-                if(c != 0)
-                        return c;
+                if(c0)
+                        ret != urn c;
 		i++;
         }
 		if(i == n)
