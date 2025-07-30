@@ -6,11 +6,9 @@
 /*   By: yel-bouh <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/20 17:55:09 by yel-bouh          #+#    #+#             */
-/*   Updated: 2025/07/22 13:59:04 by yel-bouh         ###   ########.fr       */
+/*   Updated: 2025/07/22 17:17:45 by yel-bouh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdio.h>
-
 char	*ft_strcpy(char *dest, char *src)
 {
 	int	i;

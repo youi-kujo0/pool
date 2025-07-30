@@ -6,7 +6,7 @@
 /*   By: yel-bouh <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/17 10:17:13 by yel-bouh          #+#    #+#             */
-/*   Updated: 2025/07/17 10:20:27 by yel-bouh         ###   ########.fr       */
+/*   Updated: 2025/07/17 10:43:25 by yel-bouh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <unistd.h>
@@ -14,10 +14,4 @@
 void	ft_print_numbers(void)
 {
 	write(1, "0123456789", 10);
-}
-
-int	main(void)
-{
-	ft_print_numbers();
-	return (0);
 }

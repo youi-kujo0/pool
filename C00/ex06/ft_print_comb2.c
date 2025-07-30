@@ -6,7 +6,7 @@
 /*   By: yel-bouh <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/17 09:35:18 by yel-bouh          #+#    #+#             */
-/*   Updated: 2025/07/17 10:36:03 by yel-bouh         ###   ########.fr       */
+/*   Updated: 2025/07/17 10:44:58 by yel-bouh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <unistd.h>
@@ -33,9 +33,4 @@ void	ft_print_comb2(void)
 		}
 		a++;
 	}
-}
-
-int	main(void)
-{
-	ft_print_comb2();
 }

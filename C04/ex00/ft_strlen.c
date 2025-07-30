@@ -1,20 +1,22 @@
-#include <stdio.h>
-
-int ft_strlen(char *str)
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: yel-bouh <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/07/27 09:46:08 by yel-bouh          #+#    #+#             */
+/*   Updated: 2025/07/27 09:48:14 by yel-bouh         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+int	ft_strlen(char *str)
 {
-    int len = 0;
-    while (str[len])
-    {
-        len++;
-    }
-    return len;
-}
+	int	len;
 
-int main()
-{
-    char *str = "brightyellowcandlesflickeringsoftlynow";
-    int len = ft_strlen(str);
-    printf("Length: %d\n", len);
-    return 0;
+	len = 0;
+	while (str[len])
+	{
+		len++;
+	}
+	return (len);
 }
-

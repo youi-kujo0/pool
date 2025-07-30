@@ -1,3 +1,14 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: yel-bouh <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/07/27 09:49:23 by yel-bouh          #+#    #+#             */
+/*   Updated: 2025/07/27 10:06:11 by yel-bouh         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 #include <unistd.h>
 
 void	ft_putstr(char *str)
@@ -5,14 +16,9 @@ void	ft_putstr(char *str)
 	int	i;
 
 	i = 0;
-	while(str[i])
+	while (str[i])
 	{
 		write(1, &str[i], 1);
 		i++;
 	}
-}
-
-int main()
-{
-	ft_putstr("Hey guys how are u doing today ");
 }

@@ -6,33 +6,21 @@
 /*   By: yel-bouh <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/21 16:54:06 by yel-bouh          #+#    #+#             */
-/*   Updated: 2025/07/27 13:22:18 by yel-bouh         ###   ########.fr       */
+/*   Updated: 2025/07/24 16:38:52 by yel-bouh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <stdio.h>
-
-
-int ft_strcmp(char *s1, char *s2)
+int	ft_strcmp(char *s1, char *s2)
 {
-        int     i;
-        int     c;
+	int	i;
+	int	c;
 
-        i = 0;
-        while(s1[i] != 0 && s2[i] != 0)
-        {
+	i = 0;
+	while (s1[i] != 0 && s2[i] != 0)
+	{
 		c = s1[i] - s2[i];
-		if(!( c == 0))
-			return c;
-                i++;
-        }
-        return s1[i] - s2[i];
-}
-
-int main()
-{
-        char    *s1 = "Banana";
-        char    *s2 = "Bana";
-       int result = ft_strcmp(s1, s2);
-        printf("%i", result);
+		if (c != 0)
+			return (c);
+		i++;
+	}
+	return (s1[i] - s2[i]);
 }

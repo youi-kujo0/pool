@@ -6,48 +6,72 @@
 /*   By: yel-bouh <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/27 14:19:58 by yel-bouh          #+#    #+#             */
-/*   Updated: 2025/07/27 15:38:39 by yel-bouh         ###   ########.fr       */
+/*   Updated: 2025/07/29 18:01:40 by yel-bouh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 #include <unistd.h>
-int main(int argc, char **argv)
+
+int	ft_strcmp(char *s1, char *s2)
 {
 	int	i;
-	int	y;
-	char	*temp;
-	int	X;
 
-	X = 0;
-	while(X < argc - 1)
+	i = 0;
+	while (s1[i] && s2[i] && s1[i] == s2[i])
+		i++;
+	return (s1[i] - s2[i]);
+}
+
+void	ft_swap(char **a, char **b)
+{
+	char	*temp;
+
+	temp = *a;
+	*a = *b;
+	*b = temp;
+}
+
+void	ft_sort_params(int argc, char **argv)
+{
+	int	i;
+	int	j;
+
+	j = 1;
+	while (j < argc - 1)
 	{
 		i = 1;
-		while(i < argc - 1 - X)
+		while (i < argc - j)
 		{
-			y = 0;
-			while(argv[i][y]&& argv[i + 1][y] && argv[i][y] == argv[i + 1][y])
-				y++;
-				if(argv[i][y] > argv[i + 1][y])
-				{
-					temp = argv[i];
-					argv[i] = argv[i + 1];
-					argv[i + 1] = temp;
-				}
+			if (ft_strcmp(argv[i], argv[i + 1]) > 0)
+				ft_swap(&argv[i], &argv[i + 1]);
 			i++;
 		}
-		X++;
-	}
-	i = 1;
-	while(i < argc)
-	{
-		y = 0;
-		while(argv[i][y])
-		{
-			write(1, &argv[i][y], 1);
-			y++;
-		}
-		write(1, "\n", 1);
-		i++;
+		j++;
 	}
 }
 
+void	ft_putstr(char *str)
+{
+	int	i;
+
+	i = 0;
+	while (str[i])
+	{
+		write(1, &str[i], 1);
+		i++;
+	}
+	write(1, "\n", 1);
+}
+
+int	main(int argc, char **argv)
+{
+	int	i;
+
+	i = 1;
+	ft_sort_params(argc, argv);
+	while (i < argc)
+	{
+		ft_putstr(argv[i]);
+		i++;
+	}
+	return (0);
+}

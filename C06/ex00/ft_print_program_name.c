@@ -6,20 +6,22 @@
 /*   By: yel-bouh <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/27 11:10:03 by yel-bouh          #+#    #+#             */
-/*   Updated: 2025/07/27 11:13:00 by yel-bouh         ###   ########.fr       */
+/*   Updated: 2025/07/29 19:48:26 by yel-bouh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <unistd.h>
 
-int main (int argc, char **argv)
+int	main(int argc, char **argv)
 {
 	int	i;
 
+	(void)argc;
 	i = 0;
-	while(argv[0][i] && argc == 1)
+	while (argv[0][i])
 	{
 		write(1, &argv[0][i], 1);
 		i++;
 	}
 	write(1, "\n", 1);
+	return (0);
 }

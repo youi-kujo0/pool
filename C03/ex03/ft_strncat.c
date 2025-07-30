@@ -1,30 +1,31 @@
-#include <stdio.h>
-
-char *ft_strncat(char *dest, char *src, unsigned int nb)
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strncat.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: yel-bouh <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/07/24 16:08:34 by yel-bouh          #+#    #+#             */
+/*   Updated: 2025/07/24 16:39:28 by yel-bouh         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+char	*ft_strncat(char *dest, char *src, unsigned int nb)
 {
-	int     i;
+	unsigned int	i;
 	unsigned int	j;
 
 	j = 0;
 	i = 0;
-	while(dest[i] != 0)
+	while (dest[i] != 0)
 	{
 		i++;
 	}
-		while(src[j] != 0 && j < nb)
-	     	{
-			dest[i] = src[j];
-			i++;
-			j++;
-	        }
-		dest[i] = 0;
+	while (src[j] != 0 && j < nb)
+	{
+		dest[i] = src[j];
+		i++;
+		j++;
+	}
+	dest[i] = 0;
 	return (dest);
-}
-
-int main()
-{
-	char src[30] = "Hello world ! how u doing";
-	char dest[20] = "";
-	char *result = ft_strncat(dest, src, 40);
-	printf("%s", result);
 }

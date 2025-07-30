@@ -1,27 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_sqrt.c                                          :+:      :+:    :+:   */
+/*   ft_boolean.h                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yel-bouh <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/27 21:13:23 by yel-bouh          #+#    #+#             */
-/*   Updated: 2025/07/27 21:14:11 by yel-bouh         ###   ########.fr       */
+/*   Created: 2025/07/29 17:55:34 by yel-bouh          #+#    #+#             */
+/*   Updated: 2025/07/29 17:56:21 by yel-bouh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-int	ft_sqrt(int nb)
-{
-	int	i;
-	int	y;
 
-	y = 1;
-	i = 1;
-	while (i <= nb)
-	{
-		i = y * y;
-		if (i == nb)
-			return (y);
-		y++;
-	}
-	return (0);
+include "ft_boolean.h"
+void	ft_putstr(char *str)
+{
+	while (*str)
+	write(1, str++, 1);
+}
+t_bool ft_is_even(int nbr)
+{
+	return ((EVEN(nbr)) ? TRUE : FALSE);
+}
+int	main(int argc, char **argv)
+{
+	(void)argv;
+	if (ft_is_even(argc - 1) == TRUE)
+		ft_putstr(EVEN_MSG);
+	else
+		ft_putstr(ODD_MSG);
+	return (SUCCESS);
 }

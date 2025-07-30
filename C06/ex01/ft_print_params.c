@@ -6,7 +6,7 @@
 /*   By: yel-bouh <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/27 11:14:09 by yel-bouh          #+#    #+#             */
-/*   Updated: 2025/07/27 12:06:19 by yel-bouh         ###   ########.fr       */
+/*   Updated: 2025/07/29 18:00:59 by yel-bouh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <unistd.h>
@@ -23,7 +23,7 @@ void	ft_putstr(char *str)
 	}
 }
 
-int main(int argc, char **argv)
+int	main(int argc, char **argv)
 {
 	int	i;
 
@@ -33,5 +33,6 @@ int main(int argc, char **argv)
 		ft_putstr(argv[i]);
 		write (1, "\n", 1);
 		i++;
-	}	
+	}
+	return (0);
 }
