@@ -1,28 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_boolean.h                                       :+:      :+:    :+:   */
+/*   ft_strs_to_tab.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yel-bouh <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/29 17:55:34 by yel-bouh          #+#    #+#             */
-/*   Updated: 2025/08/02 11:01:34 by yel-bouh         ###   ########.fr       */
+/*   Created: 2025/08/02 13:37:10 by yel-bouh          #+#    #+#             */
+/*   Updated: 2025/08/02 14:06:45 by yel-bouh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#ifndef FT_BOOLEAN_H
-#define FT_BOOLEAN_H
 
-#include <unistd.h>
+#include <stdlib.h>
+#include "ft_stock_str.h"
 
-#define EVEN( nbr) ((nbr % 2) == 0)
 
-#define EVEN_MSG "I have an even number of arguments.\n"
-#define ODD_MSG "I have an odd number of arguments.\n"
+int	i;
+int strlen(char *av)
 
-typedef int t_bool;
+{
+	i = 0;
+	while(av[i])
+		i++;
+	return i;
 
-#define TRUE 1
-#define FALSE 0
-#define SUCCESS 0
+}
+struct s_stock_str(int ac, char **av)
+{
+	i = 1;
+	while(i < ac)
+	{
+		int	size;
+		size = ft_strlen(av[i]);
+		
+	}
 
-#endif
+
+
+
+}
