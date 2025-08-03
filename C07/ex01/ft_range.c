@@ -6,7 +6,7 @@
 /*   By: yel-bouh <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/02 17:32:36 by yel-bouh          #+#    #+#             */
-/*   Updated: 2025/08/02 17:44:15 by yel-bouh         ###   ########.fr       */
+/*   Updated: 2025/08/03 12:12:54 by yel-bouh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,10 @@ int	*ft_range(int min, int max)
 	int	len;
 	int	i;
 
-	len = max - min;
-	if (len <= 0)
+	if (min >= max)
 		return (NULL);
-	nbr = malloc(len * sizeof(int));
+	len = max - min;
+	nbr = (int *)malloc(len * sizeof(int));
 	if (!nbr)
 		return (NULL);
 	i = 0;

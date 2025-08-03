@@ -6,7 +6,7 @@
 /*   By: yel-bouh <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/02 19:50:10 by yel-bouh          #+#    #+#             */
-/*   Updated: 2025/08/02 19:51:18 by yel-bouh         ###   ########.fr       */
+/*   Updated: 2025/08/03 10:31:56 by yel-bouh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,35 +47,35 @@ int	total_strlen(char **str, char *sep, int size)
 		i++;
 	}
 	j = 0;
-	while (sep[j])
-	{
+	while (sep[j++])
 		len_sep++;
-		j++;
-	}
 	return (len + len_sep * (size - 1));
 }
 
 char	*ft_strjoin(int size, char **strs, char *sep)
 {
+	char	*tstr;
 	int		i;
 	int		pos;
-	int		total_len;
-	char	*tstr;
 
-	pos = 0;
-	i = 0;
 	if (size <= 0)
-		return (NULL);
-	total_len = total_strlen(strs, sep, size);
-	tstr = malloc((total_len + 1) * sizeof(char));
+	{
+		tstr = malloc(1);
+		if (!tstr)
+			return (NULL);
+		*tstr = '\0';
+		return (tstr);
+	}
+	tstr = malloc((total_strlen(strs, sep, size) + 1) * sizeof(char));
 	if (!tstr)
 		return (NULL);
-	while (i < size)
+	i = -1;
+	pos = 0;
+	while (++i < size)
 	{
 		ft_strcpy(strs[i], tstr, &pos);
 		if (i < size - 1)
 			ft_strcpy(sep, tstr, &pos);
-		i++;
 	}
 	tstr[pos] = '\0';
 	return (tstr);

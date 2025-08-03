@@ -6,13 +6,13 @@
 /*   By: yel-bouh <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/02 11:58:23 by yel-bouh          #+#    #+#             */
-/*   Updated: 2025/08/02 13:12:13 by yel-bouh         ###   ########.fr       */
+/*   Updated: 2025/08/03 14:07:42 by yel-bouh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #ifndef FT_POINT_H
 #define FT_POINT_H
 
-typedef struct point
+typedef struct	point
 {
 	int x;
 	int y;

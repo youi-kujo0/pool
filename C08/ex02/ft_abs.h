@@ -6,13 +6,12 @@
 /*   By: yel-bouh <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/02 11:40:26 by yel-bouh          #+#    #+#             */
-/*   Updated: 2025/08/02 11:56:03 by yel-bouh         ###   ########.fr       */
+/*   Updated: 2025/08/03 14:06:46 by yel-bouh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #ifndef FT_ABS_H
-#define FT_ABS_H
+# define FT_ABS_H
 
-#define ABS(value) ((value < 0) ? -(value) : (value))
+# define ABS(value) (value * ((value > 0) - (value < 0))
 
 #endif
-
