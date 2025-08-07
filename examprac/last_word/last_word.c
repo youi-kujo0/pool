@@ -17,12 +17,12 @@ int main(int ac, char **av)
 	{
 		while (str[i])
 		{
-			if ((str[i] == 32 || str[i] == '\t') && str[i + 1] != 0 
+			if ((str[i] == 32 || str[i] == '\t') && str[i + 1] != 0
 			&& str[i + 1] != 32 && str[i + 1] = 't')
 				save = i + 1;
 			i++;
 		}
-	       ft_putstr(str , save);	
+	       ft_putstr(str , save);
 	}
 	write (1, "\n", 1);
 }

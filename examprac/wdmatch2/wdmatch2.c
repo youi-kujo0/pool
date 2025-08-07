@@ -7,7 +7,7 @@ int main(int ac, char **av)
 	char	*s2 = av[2];
 	if(ac == 3){
 		while(s2[j]){
-			if(s1[i] == s2[j])
+			if(s1[i] && s1[i] == s2[j])
 				i++;
 			j++;
 		}

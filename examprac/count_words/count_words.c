@@ -1,1 +1,1 @@
-int	count_words(c)
+int	count_words(c

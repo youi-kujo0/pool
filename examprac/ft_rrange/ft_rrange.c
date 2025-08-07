@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include <stdlib.h>
 int	*ft_rrange(int start, int end)
 {
@@ -12,17 +13,21 @@ int	*ft_rrange(int start, int end)
 		else
 			end--;
 	}
+	i = 0;
+	while(i  < len){
+	printf("%d\n", arr[i]);
+	i++;;
+	}
 	return arr;
 }
 
 
-#include <stdio.h>
 int main()
 {
 	int	i = 0;
-        int	*arr = ft_rrange(7000, -7000);
-	while(i  < 14000){
-	printf("%d\n", arr[i]);
-	i++;;
-	}
+        int	*arr = ft_rrange(-3, 0);
+	// while(i  < 10){
+	// printf("%d\n", arr[i]);
+	// i++;;
+	// }
 }
